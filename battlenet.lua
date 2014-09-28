@@ -15,7 +15,7 @@ local _G = _G
 
 local battlenet = {
     _VERSION = "0.0.1",
-    _DESCRIPTION = "luabattlenet: a library that exposes blizzards community platform api",
+    _DESCRIPTION = "attlenet: a library that allows easy consumption of blizzard's battle.net APIs.",
     achievement = achievement.achievement,
     auction = auction.auction,
     --battle_pet = battle_pet.ability,
