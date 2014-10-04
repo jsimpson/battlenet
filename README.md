@@ -1,1 +1,1 @@
-A partially complete (though rather incomplete) LuaRock that exposes blizzards battle.net APIs.
+A partially complete (though rather incomplete) Lua library that exposes blizzards battle.net APIs.
