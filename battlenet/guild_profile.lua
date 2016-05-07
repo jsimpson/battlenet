@@ -6,7 +6,7 @@ function bnet:guild_profile(realm, guild, ...)
     realm = string.gsub(realm, " ", "%%20")
     guild = string.gsub(guild, " ", "%%20")
 
-    local uri = "http://us.battle.net/api/wow/guild/" .. realm .. "/" .. guild
+    local uri = "https://us.api.battle.net/wow/guild/" .. realm .. "/" .. guild
 
     if arg then
         uri = uri .. "?fields=" .. arg[1]

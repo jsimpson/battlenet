@@ -3,6 +3,8 @@ require 'json'
 
 local bnet = {}
 
+local authentication = require 'battlenet.authentication'
+
 local write = function(t)
     return function(stream, buf)
         table.insert(t, buf)
@@ -11,7 +13,14 @@ local write = function(t)
 end
 
 local function get(uri)
-    local data, t, ret = {}, {}
+    local data, t, q, ret = {}, {}, "?"
+    local key = authentication:get_api_key()
+
+    if string.find(uri, "?") then
+        q = "&"
+    end
+
+    uri = uri .. q .. "locale=en_US&apikey=" .. key
 
     local c = curl:new()
     c:setopt(curl.OPT_FAILONERROR, true)
